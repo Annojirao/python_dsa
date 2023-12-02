@@ -24,10 +24,5 @@ class MoveZero:
 if __name__ == "__main__":
     num = number = [2,9,8, 0,7,1,0,3,4,0]
     print("original"+str(number))
-    # print(move_zero_beginning(number))
-    # print("beg_in_place"+ str(move_zero_beginning_with_place(number)))
-    # number = [2,9,8, 0,7,1,0,3,4,0]
-    # print("original"+str(number))
-    # print("end_in_place"+ str(move_zero_end_with_place(number)))
     move_zero = MoveZero()
     print("beg_in_place"+ str(move_zero.move_zero_beginning_with_place(num)))
