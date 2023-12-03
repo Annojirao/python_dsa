@@ -5,10 +5,11 @@ class Solution:
 
 
     def sort_by_frequency_str(self, str) -> str:
+        from collections import OrderedDict
         map = {}
         for element in str:
             map[element] = map.get(element,0) +1
-        map = dict(sorted(map.items(), key=lambda item: item[1],reverse=True))
+        map = OrderedDict(sorted(map.items(), key=lambda item: item[1],reverse=True))
         result = ''
         for key, value in map.items():
             result += key*value
