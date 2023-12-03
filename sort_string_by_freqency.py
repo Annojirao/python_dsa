@@ -15,8 +15,20 @@ class Solution:
             result += key*value
         return result
 
+    def sort_by_frequency_str_2(self, str) -> str:
+        from collections import OrderedDict
+        map = {}
+        for element in str:
+            map[element] = map.get(element,0) +1
+        result = ''
+        for item in sorted(map.items(), key=lambda item: item[1]):
+            result += item[0] * item[1] 
+        
+        return result[::-1]
+
 if __name__ == '__main__':
     str = 'tree'
     print(Solution().sort_by_frequency_str(str))
+    print(Solution().sort_by_frequency_str_2(str))
     array = [2, 7,2, 11,3,3 ,15,3]
     print(Solution().sort_by_frequency_int(array))
